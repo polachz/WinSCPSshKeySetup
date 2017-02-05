@@ -7,12 +7,12 @@ Common task provided on each new server system is to configure SSH access by SSH
 
 ##How to use the script:
 
-1. Checkout the project to locla folder
+1. Checkout the project to local folder
 2. Add your public key to the the **ssh_pub_key** file
-3. run the ssh_key_upload.bat to congigure remote dystem automatically.
+3. run the *ssh_key_upload.bat* to congigure remote system automatically.
 
 `ssh_key_upload [user[:password]@]<server>`
 
-If you don't provide user name and password, script will ask you for that.
+If you don't provide user name and password the script will ask you for that.
 
 That's all. Enjoy the script
