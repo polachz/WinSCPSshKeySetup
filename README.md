@@ -2,8 +2,8 @@
 Automaton Script to Configure Remote SSH Server to Accept SSH Key For Authentication
 
 Common task provided on each new server system is to configure SSH access by SSH public/private keypair to increase security. This set of scripts automates the task. 
-On Windows system the script uses WinSCP as a SSH client and a file transfer agent. 
-Script doesn't work on Linux host yet. But Linux support will be provided soon.
+* On Windows system the script uses WinSCP as a SSH client and a file transfer agent. 
+* Script doesn't work on Linux host yet. But Linux support will be provided soon.
 
 ##How to use the script:
 
