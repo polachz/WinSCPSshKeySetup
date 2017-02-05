@@ -1,6 +1,38 @@
+# title           :winscp_key_update.txt
+# description     :WinSCP script to setup SSH key access remotely  
+# author          :zdenek polach ( https://github.com/polachz )
+# date            :05.02.2017
+# version         :0.1
+# usage           :Invoked by ssh_key_upload.bat
+
+# -------------------------------------------------------------------------
+
+# MIT license - see the set_ssh_key_access.sh file
+
+# -------------------------------------------------------------------------
+
+
 # Connect to SFTP server using a password
-open sftp://%WINSP_SSH_USER%@%WINSCP_SSH_SERVER% 
-# Upload file
-put E:\WinSCP\readme.txt /home/%WINSP_SSH_USER/
+open sftp://%WINSP_SSH_PARMS% 
+option transfer ascii
+cd
+#upload key file - do not fail if not exist
+option batch continue
+put ssh_pub_key
+#reset continue option
+option batch abort
+# Upload the script
+put set_ssh_key_access.sh 
+# Make it executable
+chmod 755 set_ssh_key_access.sh
+
+#now call the script
+call ./set_ssh_key_access.sh
+
+#make cleanup 
+option batch continue
+rm ssh_pub_key
+option batch abort
+rm set_ssh_key_access.sh
 # Exit WinSCP
 exit
