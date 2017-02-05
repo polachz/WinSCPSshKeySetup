@@ -1,0 +1,6 @@
+# Connect to SFTP server using a password
+open sftp://%WINSP_SSH_USER%@%WINSCP_SSH_SERVER% 
+# Upload file
+put E:\WinSCP\readme.txt /home/%WINSP_SSH_USER/
+# Exit WinSCP
+exit

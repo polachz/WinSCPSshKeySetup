@@ -1,0 +1,4 @@
+#Please place public SSH key here
+#If you can't use this file then set the SSH_KEY variable
+#in the set_ssh_key_access.sh script file
+
